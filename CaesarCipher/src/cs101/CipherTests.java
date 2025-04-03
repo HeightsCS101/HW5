@@ -16,6 +16,10 @@ class CipherTests {
 		char[] c = cipher.encrypt(m);
 
 		equals(m, c);
+
+		char[] m_prime = cipher.decrypt(c);
+
+		equals(m, m_prime);
 	}
 
 	@Test
@@ -30,6 +34,10 @@ class CipherTests {
 		char[] c_real = { 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
 				'Y', 'Z', 'A', 'B', 'C', 'D', 'E' };
 		equals(c_real, c);
+
+		char[] m_prime = cipher.decrypt(c);
+
+		equals(m, m_prime);
 	}
 
 	@Test
@@ -44,6 +52,10 @@ class CipherTests {
 		char[] c_real = { 'D', 'E', 'S', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'F', 'T', 'U', 'V',
 				'W', 'X', 'Y', 'Z', 'A', 'B', 'C' };
 		equals(c_real, c);
+
+		char[] m_prime = cipher.decrypt(c);
+
+		equals(m, m_prime);
 	}
 
 	@Test
@@ -58,6 +70,10 @@ class CipherTests {
 		char[] c_real = { 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C',
 				'D', 'E', 'F', 'G', 'H', 'I', 'J' };
 		equals(c_real, c);
+
+		char[] m_prime = cipher.decrypt(c);
+
+		equals(m, m_prime);
 	}
 
 	// helper
